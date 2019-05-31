@@ -6,23 +6,26 @@
     
 
     
-    <title>Lawrence&#39;s blog</title>
+    <title>JDK8에서 기본 GC(Garbage Collector) | Lawrence&#39;s blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="">
+        <meta name="keywords" content="jdk,gc">
     
-    <meta name="description" content="title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:  jdk gc—`  JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을">
+    <meta name="description" content="JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 스택오버플로우에서 이런 글을 찾았다 글의 내용을 요약하면 머신에 따라 의존적이라는 것이다.  서버 클래스 머신일 경우 Parallel Collector 클라이언트 클래스 머신일 경우 Serial Collector  2가지를 구분하는 것은 물리적 프로세서의 갯수와 메모리의 크기, 32bit 윈도우">
+<meta name="keywords" content="jdk,gc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lawrence&#39;s blog">
+<meta property="og:title" content="JDK8에서 기본 GC(Garbage Collector)">
 <meta property="og:url" content="http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/index.html">
 <meta property="og:site_name" content="Lawrence&#39;s blog">
-<meta property="og:description" content="title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:  jdk gc—`  JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을">
+<meta property="og:description" content="JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 스택오버플로우에서 이런 글을 찾았다 글의 내용을 요약하면 머신에 따라 의존적이라는 것이다.  서버 클래스 머신일 경우 Parallel Collector 클라이언트 클래스 머신일 경우 Serial Collector  2가지를 구분하는 것은 물리적 프로세서의 갯수와 메모리의 크기, 32bit 윈도우">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-05-31T14:03:26.067Z">
+<meta property="og:image" content="https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png">
+<meta property="og:updated_time" content="2019-05-31T14:10:39.128Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lawrence&#39;s blog">
-<meta name="twitter:description" content="title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:  jdk gc—`  JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을">
+<meta name="twitter:title" content="JDK8에서 기본 GC(Garbage Collector)">
+<meta name="twitter:description" content="JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 스택오버플로우에서 이런 글을 찾았다 글의 내용을 요약하면 머신에 따라 의존적이라는 것이다.  서버 클래스 머신일 경우 Parallel Collector 클라이언트 클래스 머신일 경우 Serial Collector  2가지를 구분하는 것은 물리적 프로세서의 갯수와 메모리의 크기, 32bit 윈도우">
+<meta name="twitter:image" content="https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png">
     
 
     
@@ -70,7 +73,7 @@
                                     <a class="main-nav-list-link" href="/">홈</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Frontend/">Frontend</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Gossip/">Gossip</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Frontend/">Frontend</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Gossip/">Gossip</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Java/">Java</a></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -129,7 +132,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    미지정
+    <a class="page-title-link" href="/categories/Java/">Java</a>
     </h1>
 </div>
 
@@ -137,36 +140,44 @@
                             <article id="post-2019-05-31-jdk8-default-gc" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JDK8에서 기본 GC(Garbage Collector)
+        </h1>
+    
+
+            </header>
+        
         
             <div class="article-meta">
                 
     <div class="article-date">
         <a href="/2019/05/31/2019-05-31-jdk8-default-gc/" class="article-date">
-            <time datetime="2019-05-31T13:51:04.562Z" itemprop="datePublished">2019-05-31</time>
+            <time datetime="2019-05-31T13:51:04.000Z" itemprop="datePublished">2019-05-31</time>
         </a>
     </div>
 
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/gc/">gc</a>, <a class="tag-link" href="/tags/jdk/">jdk</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <hr>
-<p>title: 2019-05-31-jdk8-default-gc<br>date: 2019-05-31 22:51:04<br>category: Java<br>thumbnail: <a href="https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png" target="_blank" rel="noopener">https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png</a><br>tags:</p>
-<ul>
-<li>jdk</li>
-<li>gc<br>—`</li>
-</ul>
-<p>JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 스택오버플로우에서 이런 글은 글을 찾았다</p>
+            <p>JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 <a href="http://stackoverflow.com/questions/33206313/default-garbage-collector-for-java-8" target="_blank" rel="noopener">스택오버플로우에서 이런 글을</a> 찾았다</p>
 <p>글의 내용을 요약하면 머신에 따라 의존적이라는 것이다.</p>
 <ul>
 <li>서버 클래스 머신일 경우 Parallel Collector</li>
 <li>클라이언트 클래스 머신일 경우 Serial Collector</li>
 </ul>
 <p>2가지를 구분하는 것은 물리적 프로세서의 갯수와 메모리의 크기, 32bit 윈도우즈 플랫폼이냐 하는 것인데<br>최근에는 머신에 멀티 코어 프로세서가 대부분 탑재 되므로 JVM이 항상 parallel collector를 선택한다고 한다.</p>
-<p><a href="http://stackoverflow.com/questions/33206313/default-garbage-collector-for-java-8" target="_blank" rel="noopener">Stackoverflow 링크</a></p>
 
         </div>
         <footer class="article-footer">
@@ -244,22 +255,22 @@
             "@type": "Person",
             "name": "Lawrence Kim"
         },
-        
-        "image": "http://blog.lawrence.pe.kr",
-        "keywords": "",
-        "genre": "",
+        "headline": "JDK8에서 기본 GC(Garbage Collector)",
+        "image": "http://blog.lawrence.pe.krhttps://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png",
+        "keywords": "jdk gc",
+        "genre": "Java",
         "datePublished": "2019-05-31",
         "dateCreated": "2019-05-31",
         "dateModified": "2019-05-31",
         "url": "http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/",
-        "description": "
-title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:
+        "description": "JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 스택오버플로우에서 이런 글을 찾았다
+글의 내용을 요약하면 머신에 따라 의존적이라는 것이다.
 
-jdk
-gc—`
+서버 클래스 머신일 경우 Parallel Collector
+클라이언트 클래스 머신일 경우 Serial Collector
 
-JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
-        "wordCount": 66
+2가지를 구분하는 것은 물리적 프로세서의 갯수와 메모리의 크기, 32bit 윈도우"
+        "wordCount": 56
     }
 </script>
 
@@ -343,7 +354,7 @@ JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
                             <a href="/2019/05/31/2019-05-31-jdk8-default-gc/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png)" alt="JDK8에서 기본 GC(Garbage Collector)" class="thumbnail-image"></span>
     
     
 </a>
@@ -351,9 +362,9 @@ JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/05/31/2019-05-31-jdk8-default-gc/" class="title"></a></p>
-                            <p class="item-date"><time datetime="2019-05-31T13:51:04.562Z" itemprop="datePublished">2019-05-31</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Java/">Java</a></p>
+                            <p class="item-title"><a href="/2019/05/31/2019-05-31-jdk8-default-gc/" class="title">JDK8에서 기본 GC(Garbage Collector)</a></p>
+                            <p class="item-date"><time datetime="2019-05-31T13:51:04.000Z" itemprop="datePublished">2019-05-31</time></p>
                         </div>
                     </li>
                 
@@ -426,7 +437,7 @@ JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">카테고리</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/">Frontend</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gossip/">Gossip</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/">Frontend</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gossip/">Gossip</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -446,7 +457,7 @@ JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">태그</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-pages/">github pages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tldr/">tldr</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gc/">gc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-pages/">github pages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tldr/">tldr</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -456,7 +467,7 @@ JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">태그 클라우드</h3>
         <div class="widget tagcloud">
-            <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tldr/" style="font-size: 10px;">tldr</a>
+            <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/gc/" style="font-size: 10px;">gc</a> <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jdk/" style="font-size: 10px;">jdk</a> <a href="/tags/tldr/" style="font-size: 10px;">tldr</a>
         </div>
     </div>
 
