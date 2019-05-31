@@ -6,17 +6,23 @@
     
 
     
-    <title>카테고리: Frontend | Lawrence&#39;s blog</title>
+    <title>Lawrence&#39;s blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
+        <meta name="keywords" content="">
+    
+    <meta name="description" content="title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:  jdk gc—`  JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Lawrence&#39;s blog">
-<meta property="og:url" content="http://blog.lawrence.pe.kr/categories/Frontend/index.html">
+<meta property="og:url" content="http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/index.html">
 <meta property="og:site_name" content="Lawrence&#39;s blog">
+<meta property="og:description" content="title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:  jdk gc—`  JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을">
 <meta property="og:locale" content="ko">
+<meta property="og:updated_time" content="2019-05-31T14:03:26.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lawrence&#39;s blog">
+<meta name="twitter:description" content="title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:  jdk gc—`  JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을">
     
 
     
@@ -123,125 +129,151 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>카테고리: <em class="page-title-link">Frontend</em>
+    미지정
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
+                            <article id="post-2019-05-31-jdk8-default-gc" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/05/31/2019-05-31-jdk8-default-gc/" class="article-date">
+            <time datetime="2019-05-31T13:51:04.562Z" itemprop="datePublished">2019-05-31</time>
+        </a>
+    </div>
 
-    
-    
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
+		
+
+                
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/2019/02/04/electon-tutorial/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1920px-Electron_Software_Framework_Logo.svg.png)" alt="electon-tutorial" class="thumbnail-image"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <hr>
+<p>title: 2019-05-31-jdk8-default-gc<br>date: 2019-05-31 22:51:04<br>category: Java<br>thumbnail: <a href="https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png" target="_blank" rel="noopener">https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.png</a><br>tags:</p>
+<ul>
+<li>jdk</li>
+<li>gc<br>—`</li>
+</ul>
+<p>JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 해봤는데 스택오버플로우에서 이런 글은 글을 찾았다</p>
+<p>글의 내용을 요약하면 머신에 따라 의존적이라는 것이다.</p>
+<ul>
+<li>서버 클래스 머신일 경우 Parallel Collector</li>
+<li>클라이언트 클래스 머신일 경우 Serial Collector</li>
+</ul>
+<p>2가지를 구분하는 것은 물리적 프로세서의 갯수와 메모리의 크기, 32bit 윈도우즈 플랫폼이냐 하는 것인데<br>최근에는 머신에 멀티 코어 프로세서가 대부분 탑재 되므로 JVM이 항상 parallel collector를 선택한다고 한다.</p>
+<p><a href="http://stackoverflow.com/questions/33206313/default-garbage-collector-for-java-8" target="_blank" rel="noopener">Stackoverflow 링크</a></p>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
-            </div>
-            <div class="date"><time datetime="2019-02-04T13:24:55.000Z" itemprop="datePublished">2019-02-04</time></div>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/02/04/electon-tutorial/">electon-tutorial</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
+        <footer class="article-footer">
             
-Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다.
-Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음 
-        </p>
+
+
+
+    <a data-url="http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/" data-id="cjwc5b5kj000kltxr2syhrh6j" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Lawrence Kim"
+        },
+        
+        "image": "http://blog.lawrence.pe.kr",
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2019-05-31",
+        "dateCreated": "2019-05-31",
+        "dateModified": "2019-05-31",
+        "url": "http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/",
+        "description": "
+title: 2019-05-31-jdk8-default-gcdate: 2019-05-31 22:51:04category: Javathumbnail: https://bloggceasy.files.wordpress.com/2016/08/garbage-collection.pngtags:
+
+jdk
+gc—`
+
+JDK 8에서 기본 GC가 무엇인지 궁금해서 구글링을 "
+        "wordCount": 66
+    }
+</script>
+
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2019/01/21/settings-custom-domain/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://cdn-images-1.medium.com/max/1600/1*pv5LukDtyQx5JXQee2uNgA.jpeg)" alt="Github Pages에 custom domain 설정하기" class="thumbnail-image"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://blog.lawrence.pe.kr/2019/01/21/settings-custom-domain/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
-            </div>
-            <div class="date"><time datetime="2019-01-21T11:41:53.000Z" itemprop="datePublished">2019-01-21</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/01/21/settings-custom-domain/">Github Pages에 custom domain 설정하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/256px-Electron_Software_Framework_Logo.svg.png
-Github pages에서 custom 도메인을 설정하는 방법이다.
-
-Github에서 custom dom
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
+
     
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
 
@@ -279,6 +311,19 @@ Github에서 custom dom
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/02/04/electon-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">오래된</strong>
+        <p class="article-nav-title">electon-tutorial</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -467,11 +512,13 @@ Github에서 custom dom
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
