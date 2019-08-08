@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
 
@@ -10,7 +11,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="electron">
+    <meta name="keywords" content="electron">
     
     <meta name="description" content="Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다. Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음">
 <meta name="keywords" content="electron">
@@ -27,6 +28,7 @@
 <meta name="twitter:description" content="Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다. Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음">
 <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1920px-Electron_Software_Framework_Logo.svg.png">
     
+    <link rel="canonical" href="http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/">
 
     
 
@@ -50,8 +52,7 @@
     
 
 
-</head>
-</html>
+</head></html>
 <body>
     <div id="wrap">
         <header id="header">
@@ -172,14 +173,14 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="./electron-first-page.png" alt="Electron-first-page"></p>
-<h3 id="Electron-소개"><a href="#Electron-소개" class="headerlink" title="Electron 소개"></a>Electron 소개</h3><p>HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 <a href="https://electronjs.org/" target="_blank" rel="noopener">Electron</a>이다.</p>
+<h3 id="Electron-소개"><a href="#Electron-소개" class="headerlink" title="Electron 소개"></a>Electron 소개</h3><p>HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 <a href="https://electronjs.org/" target="_blank" rel="external nofollow noopener noreferrer">Electron</a>이다.</p>
 <p>Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음 릴리즈 되어 올해로 벌써 6년째 개발 및 유지보수가 진행 중이다.</p>
-<p>Electron으로 개발된 유명한 앱은 Github의 Atom Editor, MS의 Visual Studio Code 를 비롯하여 Slack, Skype, Whats App 등이 있다. <a href="https://electronjs.org/apps" target="_blank" rel="noopener">이 페이지</a>에서 Electron으로 개발된 더 많은 앱을 확인할 수 있다.</p>
+<p>Electron으로 개발된 유명한 앱은 Github의 Atom Editor, MS의 Visual Studio Code 를 비롯하여 Slack, Skype, Whats App 등이 있다. <a href="https://electronjs.org/apps" target="_blank" rel="external nofollow noopener noreferrer">이 페이지</a>에서 Electron으로 개발된 더 많은 앱을 확인할 수 있다.</p>
 <p>Electron으로 개발하게 되면 Node.js의 백엔드와 Chromium 프론트엔드 기술을 사용하여 네이티브앱이 구동되도록 되어있다.</p>
 <h3 id="Electron-설치하기"><a href="#Electron-설치하기" class="headerlink" title="Electron 설치하기"></a>Electron 설치하기</h3><p>Electron은 총 3 종류로 릴리즈를 하고 있으며, 각각을 <code>latest</code>, <code>beta</code>, <code>nightly</code>라고 부른다. <code>latest</code>는 안정적인 가장 최신버전의 앱을 가리키며, <code>beta</code>는 곧 변경될 기능을 사용할 수 있는 버전이고, <code>nightly</code>는 실험적인 기능까지 사용할 수 있는 버전이다.</p>
 <p>각각을 설치하는 방법은 아래와 같다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -D electron@latest</span><br><span class="line">$ npm i -D electron@beta</span><br><span class="line">$ npm i -D electron-nightly</span><br></pre></td></tr></table></figure>
-<p>Electron에 첫 페이지에 가면 아래와 같이 버전도 명시가 되어 있고, <a href="https://electronjs.org/releases/stable" target="_blank" rel="noopener">Releases</a> 페이지에 가면 각 버전별로 기능, 버그수정, 변경점 등을 함께 확인할 수도 있다.</p>
+<p>Electron에 첫 페이지에 가면 아래와 같이 버전도 명시가 되어 있고, <a href="https://electronjs.org/releases/stable" target="_blank" rel="external nofollow noopener noreferrer">Releases</a> 페이지에 가면 각 버전별로 기능, 버그수정, 변경점 등을 함께 확인할 수도 있다.</p>
 <p><img src="./electron-release.png" alt="electron-release"></p>
 <h3 id="Electron-Demo-App-살펴보기"><a href="#Electron-Demo-App-살펴보기" class="headerlink" title="Electron Demo App 살펴보기"></a>Electron Demo App 살펴보기</h3><p>Electron은 API 기능을 살펴볼 수 있는 Demo App을 제공하고 있다. 이를 살펴보면 Electron을 이해하는데 큰 도움을 받을 수 있다. 아래 명령어를 순서대로 실행하면 Demo App이 실행된다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/electron/electron-api-demos</span><br><span class="line">$ <span class="built_in">cd</span> electron-api-demos</span><br><span class="line">$ npm install</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
@@ -302,7 +303,7 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/Pr_Lawrence" target="_blank" rel="noopener">
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/Pr_Lawrence" target="_blank" rel="external nofollow noopener noreferrer">
                         <i class="icon fa fa-twitter"></i>
                     </a>
                 </li>
@@ -310,7 +311,7 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
             
                 
                 <li>
-                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/kyeongbeom.kim.5" target="_blank" rel="noopener">
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/kyeongbeom.kim.5" target="_blank" rel="external nofollow noopener noreferrer">
                         <i class="icon fa fa-facebook"></i>
                     </a>
                 </li>
@@ -318,7 +319,7 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
             
                 
                 <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/pr-lawrence" target="_blank" rel="noopener">
+                    <a class="social-tooltip" title="github" href="https://github.com/pr-lawrence" target="_blank" rel="external nofollow noopener noreferrer">
                         <i class="icon fa fa-github"></i>
                     </a>
                 </li>
@@ -494,7 +495,7 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
             <ul>
                 
                     <li>
-                        <a href="http://hexo.io">Hexo</a>
+                        <a href="http://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>
                     </li>
                 
             </ul>
@@ -574,4 +575,4 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
 
     </div>
 </body>
-</html>
+
