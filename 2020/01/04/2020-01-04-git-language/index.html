@@ -7,28 +7,28 @@
     
 
     
-    <title>electon-tutorial | Lawrence&#39;s blog</title>
+    <title>2020-01-04-git-language.md | Lawrence&#39;s blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="electron">
+    <meta name="keywords" content="git,git-config,git-language-setting">
     
-    <meta name="description" content="Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다. Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음">
-<meta name="keywords" content="electron">
+    <meta name="description" content="MAC에서 brew 패키지매니저를 사용하여 Git을 설치하다가 특정 버전 이후에(아마도 2.19이상)는 git에 대한 명령줄에서 한글을 만날 수 있다.원인은 brew에서 git을 설치할 때 gettext라는 라이브러리를 필수로 넣으면서 자동 번역이 되는 것이다. 다시 영어로 출력되게 하는 방법은 git을 삭제 했다가 설치 옵션을 바꿔 다시 설치해야 한다.">
+<meta name="keywords" content="git,git-config,git-language-setting">
 <meta property="og:type" content="article">
-<meta property="og:title" content="electon-tutorial">
-<meta property="og:url" content="http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/index.html">
+<meta property="og:title" content="2020-01-04-git-language.md">
+<meta property="og:url" content="http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/index.html">
 <meta property="og:site_name" content="Lawrence&#39;s blog">
-<meta property="og:description" content="Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다. Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음">
+<meta property="og:description" content="MAC에서 brew 패키지매니저를 사용하여 Git을 설치하다가 특정 버전 이후에(아마도 2.19이상)는 git에 대한 명령줄에서 한글을 만날 수 있다.원인은 brew에서 git을 설치할 때 gettext라는 라이브러리를 필수로 넣으면서 자동 번역이 되는 것이다. 다시 영어로 출력되게 하는 방법은 git을 삭제 했다가 설치 옵션을 바꿔 다시 설치해야 한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1920px-Electron_Software_Framework_Logo.svg.png">
-<meta property="og:updated_time" content="2019-05-31T13:10:06.594Z">
+<meta property="og:image" content="http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/2020-01-04-git-language/git.png">
+<meta property="og:updated_time" content="2020-01-04T15:14:17.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="electon-tutorial">
-<meta name="twitter:description" content="Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다. Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음">
-<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1920px-Electron_Software_Framework_Logo.svg.png">
+<meta name="twitter:title" content="2020-01-04-git-language.md">
+<meta name="twitter:description" content="MAC에서 brew 패키지매니저를 사용하여 Git을 설치하다가 특정 버전 이후에(아마도 2.19이상)는 git에 대한 명령줄에서 한글을 만날 수 있다.원인은 brew에서 git을 설치할 때 gettext라는 라이브러리를 필수로 넣으면서 자동 번역이 되는 것이다. 다시 영어로 출력되게 하는 방법은 git을 삭제 했다가 설치 옵션을 바꿔 다시 설치해야 한다.">
+<meta name="twitter:image" content="http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/2020-01-04-git-language/git.png">
     
-    <link rel="canonical" href="http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/">
+    <link rel="canonical" href="http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/">
 
     
 
@@ -133,19 +133,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Frontend/">Frontend</a>
+    <a class="page-title-link" href="/categories/Git/">Git</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-electon-tutorial" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-2020-01-04-git-language" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        electon-tutorial
+        2020-01-04-git-language.md
         </h1>
     
 
@@ -155,8 +155,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/02/04/electon-tutorial/" class="article-date">
-            <time datetime="2019-02-04T13:24:55.000Z" itemprop="datePublished">2019-02-04</time>
+        <a href="/2020/01/04/2020-01-04-git-language/" class="article-date">
+            <time datetime="2020-01-04T14:55:01.000Z" itemprop="datePublished">2020-01-04</time>
         </a>
     </div>
 
@@ -165,28 +165,28 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/electron/">electron</a>
+        <a class="tag-link" href="/tags/git/">git</a>, <a class="tag-link" href="/tags/git-config/">git-config</a>, <a class="tag-link" href="/tags/git-language-setting/">git-language-setting</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="./electron-first-page.png" alt="Electron-first-page"></p>
-<h3 id="Electron-소개"><a href="#Electron-소개" class="headerlink" title="Electron 소개"></a>Electron 소개</h3><p>HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 <a href="https://electronjs.org/" rel="external nofollow noopener noreferrer" target="_blank">Electron</a>이다.</p>
-<p>Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음 릴리즈 되어 올해로 벌써 6년째 개발 및 유지보수가 진행 중이다.</p>
-<p>Electron으로 개발된 유명한 앱은 Github의 Atom Editor, MS의 Visual Studio Code 를 비롯하여 Slack, Skype, Whats App 등이 있다. <a href="https://electronjs.org/apps" rel="external nofollow noopener noreferrer" target="_blank">이 페이지</a>에서 Electron으로 개발된 더 많은 앱을 확인할 수 있다.</p>
-<p>Electron으로 개발하게 되면 Node.js의 백엔드와 Chromium 프론트엔드 기술을 사용하여 네이티브앱이 구동되도록 되어있다.</p>
-<h3 id="Electron-설치하기"><a href="#Electron-설치하기" class="headerlink" title="Electron 설치하기"></a>Electron 설치하기</h3><p>Electron은 총 3 종류로 릴리즈를 하고 있으며, 각각을 <code>latest</code>, <code>beta</code>, <code>nightly</code>라고 부른다. <code>latest</code>는 안정적인 가장 최신버전의 앱을 가리키며, <code>beta</code>는 곧 변경될 기능을 사용할 수 있는 버전이고, <code>nightly</code>는 실험적인 기능까지 사용할 수 있는 버전이다.</p>
-<p>각각을 설치하는 방법은 아래와 같다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -D electron@latest</span><br><span class="line">$ npm i -D electron@beta</span><br><span class="line">$ npm i -D electron-nightly</span><br></pre></td></tr></table></figure>
-<p>Electron에 첫 페이지에 가면 아래와 같이 버전도 명시가 되어 있고, <a href="https://electronjs.org/releases/stable" rel="external nofollow noopener noreferrer" target="_blank">Releases</a> 페이지에 가면 각 버전별로 기능, 버그수정, 변경점 등을 함께 확인할 수도 있다.</p>
-<p><img src="./electron-release.png" alt="electron-release"></p>
-<h3 id="Electron-Demo-App-살펴보기"><a href="#Electron-Demo-App-살펴보기" class="headerlink" title="Electron Demo App 살펴보기"></a>Electron Demo App 살펴보기</h3><p>Electron은 API 기능을 살펴볼 수 있는 Demo App을 제공하고 있다. 이를 살펴보면 Electron을 이해하는데 큰 도움을 받을 수 있다. 아래 명령어를 순서대로 실행하면 Demo App이 실행된다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/electron/electron-api-demos</span><br><span class="line">$ <span class="built_in">cd</span> electron-api-demos</span><br><span class="line">$ npm install</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
-<p>실행된 Demo App은 아래와 같은 형상이며, 좌측에 메뉴, 오른쪽에 해당 기능에 대한 설명이 코드와 함께 있으며, 몇몇 메뉴는 View Demo버튼으로 직접 실행되는 것도 확인할 수 있다.</p>
-<p><img src="./electron-demo-app.png" alt="electron-demo-app"></p>
-<h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><p>이 포스팅에서는 Electron이 무엇인지 알아보고 Demo App을 통해 어떤 기능이 있는지 확인해보았다.</p>
+            <p>MAC에서 brew 패키지매니저를 사용하여 Git을 설치하다가 특정 버전 이후에(아마도 2.19이상)는 git에 대한 명령줄에서 한글을 만날 수 있다.<br>원인은 brew에서 git을 설치할 때 <code>gettext</code>라는 라이브러리를 필수로 넣으면서 자동 번역이 되는 것이다.</p>
+<p>다시 영어로 출력되게 하는 방법은 git을 삭제 했다가 설치 옵션을 바꿔 다시 설치해야 한다.</p>
+<ol>
+<li>git 삭제</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew uninstall git</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>git 설치 옵션 변경</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ brew edit git</span><br><span class="line"></span><br><span class="line">&lt;&lt;&lt;</span><br><span class="line">- depends_on &quot;gettext&quot;</span><br><span class="line">+ depends_on &quot;gettext&quot; =&gt; :optional</span><br><span class="line">&lt;&lt;&lt;</span><br><span class="line">- args = %W[</span><br><span class="line">+ ENV[&quot;NO_GETTEXT&quot;] = &quot;1&quot; if build.without? &quot;gettext&quot;</span><br><span class="line">+</span><br><span class="line">+ args = %W[</span><br><span class="line">&lt;&lt;&lt;</span><br><span class="line">:wq</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>재 설치</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install -s git</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://stackoverflow.com/questions/52426922/git-cli-in-russian-after-brew-upgrade/52592260#52592260" rel="external nofollow noopener noreferrer" target="_blank">Stackover flow - git-cli-in-russian-after-brew-upgrade</a><br><a href="https://kyubot.tistory.com/125" rel="external nofollow noopener noreferrer" target="_blank">mac 에서 git 언어 변경되는 문제</a><br><a href="https://www.clien.net/service/board/cm_mac/12884754" rel="external nofollow noopener noreferrer" target="_blank">Clien - 맥의 터미널 git 언어가 한국어로 바뀌었네요? 어떻게 되돌리죠?</a></p>
 
         </div>
         <footer class="article-footer">
@@ -194,7 +194,7 @@
 
 
 
-    <a data-url="http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/" data-id="ckayghojv00082mxro60nbax1" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
+    <a data-url="http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/" data-id="ckayghojt00062mxr55lg718q" class="article-share-link"><i class="fa fa-share"></i>공유하기</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -264,18 +264,18 @@
             "@type": "Person",
             "name": "Lawrence Kim"
         },
-        "headline": "electon-tutorial",
-        "image": "http://blog.lawrence.pe.krhttps://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1920px-Electron_Software_Framework_Logo.svg.png",
-        "keywords": "electron",
-        "genre": "Frontend",
-        "datePublished": "2019-02-04",
-        "dateCreated": "2019-02-04",
-        "dateModified": "2019-05-31",
-        "url": "http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/",
-        "description": "
-Electron 소개HTML과 JAVASCRIPT, CSS에 익숙한 개발자라면 손쉽게 네이티브 애플리케이션을 개발할 수 있다. 처음 이런 내용을 접하는 사람이라면 의아해 할 것이다. Web 기반 기술로 네이티브 애플리케이션을 가능하게 하는 것은 바로 Electron이다.
-Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년에 처음 "
-        "wordCount": 300
+        "headline": "2020-01-04-git-language.md",
+        "image": "http://blog.lawrence.pe.kr2020-01-04-git-language/git.png",
+        "keywords": "git git-config git-language-setting",
+        "genre": "Git",
+        "datePublished": "2020-01-04",
+        "dateCreated": "2020-01-04",
+        "dateModified": "2020-01-05",
+        "url": "http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/",
+        "description": "MAC에서 brew 패키지매니저를 사용하여 Git을 설치하다가 특정 버전 이후에(아마도 2.19이상)는 git에 대한 명령줄에서 한글을 만날 수 있다.원인은 brew에서 git을 설치할 때 gettext라는 라이브러리를 필수로 넣으면서 자동 번역이 되는 것이다.
+다시 영어로 출력되게 하는 방법은 git을 삭제 했다가 설치 옵션을 바꿔 다시 설치해야 한다.
+"
+        "wordCount": 156
     }
 </script>
 
@@ -331,20 +331,10 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
         
 <nav id="article-nav">
     
-        <a href="/2019/05/31/2019-05-31-jdk8-default-gc/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">새로운</strong>
-        <p class="article-nav-title">
-        
-            JDK8에서 기본 GC(Garbage Collector)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/01/21/settings-custom-domain/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/08/08/2019-08-08-how-to-install-elasticsearch/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">오래된</strong>
-        <p class="article-nav-title">Github Pages에 custom domain 설정하기</p>
+        <p class="article-nav-title">엘라스틱서치 소개</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -558,7 +548,7 @@ Electon은 Github이 주도 해서 개발하고 있는 오픈소스로 2013년�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://blog.lawrence.pe.kr/2019/02/04/electon-tutorial/';
+    var disqus_url = 'http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/';
     
     (function() {
     var dsq = document.createElement('script');

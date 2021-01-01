@@ -9,7 +9,7 @@
 
     <url>
         <loc>http://blog.lawrence.pe.kr/2019/05/31/2019-05-31-jdk8-default-gc/</loc>
-        <lastmod>2019-07-26T14:27:20.427Z</lastmod>
+        <lastmod>2020-01-16T14:34:05.004Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,23 @@
 
     <url>
         <loc>http://blog.lawrence.pe.kr/2019/01/15/2019-01-15-blog/</loc>
-        <lastmod>2019-05-31T13:10:26.181Z</lastmod>
+        <lastmod>2020-01-16T14:24:24.915Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.lawrence.pe.kr/2019/08/08/2019-08-08-how-to-install-elasticsearch/</loc>
+        <lastmod>2020-01-04T15:14:19.944Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blog.lawrence.pe.kr/2020/01/04/2020-01-04-git-language/</loc>
+        <lastmod>2020-01-04T15:14:17.351Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
