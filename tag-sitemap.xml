@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>http://blog.lawrence.pe.kr/tags/git-language-setting/</loc>
+        <lastmod>2021-02-01T02:52:14.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.lawrence.pe.kr/tags/git-config/</loc>
+        <lastmod>2021-02-01T02:52:14.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.lawrence.pe.kr/tags/git/</loc>
+        <lastmod>2021-02-01T02:52:14.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.lawrence.pe.kr/tags/electron/</loc>
+        <lastmod>2021-02-01T02:23:37.507Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://blog.lawrence.pe.kr/tags/elasticsearch/</loc>
         <lastmod>2021-02-01T02:17:54.374Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -10,8 +38,15 @@
     </url>
 
     <url>
-        <loc>http://blog.lawrence.pe.kr/tags/electron/</loc>
-        <lastmod>2021-02-01T02:17:51.273Z</lastmod>
+        <loc>http://blog.lawrence.pe.kr/tags/gc/</loc>
+        <lastmod>2021-02-01T02:17:49.774Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.lawrence.pe.kr/tags/jdk/</loc>
+        <lastmod>2021-02-01T02:17:49.774Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -38,43 +73,8 @@
     </url>
 
     <url>
-        <loc>http://blog.lawrence.pe.kr/tags/git-language-setting/</loc>
-        <lastmod>2021-02-01T02:08:06.966Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.lawrence.pe.kr/tags/git-config/</loc>
-        <lastmod>2021-02-01T02:08:06.966Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.lawrence.pe.kr/tags/git/</loc>
-        <lastmod>2021-02-01T02:08:06.966Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://blog.lawrence.pe.kr/tags/tldr/</loc>
-        <lastmod>2021-02-01T02:00:49.788Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.lawrence.pe.kr/tags/gc/</loc>
-        <lastmod>2020-01-16T14:34:05.004Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://blog.lawrence.pe.kr/tags/jdk/</loc>
-        <lastmod>2020-01-16T14:34:05.004Z</lastmod>
+        <lastmod>2021-02-01T02:07:12.166Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
